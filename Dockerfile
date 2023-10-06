@@ -7,4 +7,4 @@ ENV QR_CODE_DEFAULT_FILE_NAME='default.png'
 WORKDIR /home/myuser
 COPY --chown=myuser:myuser . .
 RUN pip install -r requirements.txt
-ENTRYPOINT "runuser", "-u", "myuser", "python","./main.py"]
+ENTRYPOINT [ "runuser", "-u", "myuser", "python","./main.py"]
